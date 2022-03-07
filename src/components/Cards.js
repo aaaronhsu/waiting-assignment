@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Cards.css';
+import '../css/Cards.css';
 
 class Cards extends Component {
 
@@ -7,12 +7,7 @@ class Cards extends Component {
     super(props);
 
     this.state = {
-      id_level: .5,
-      superego_level: .5,
-
-      decisions: [
-        {id: 1, name: 'Test Decision 1', description: 'Test Description 1', id_impact: -.1, superego_impact: .1},
-      ],
+      
     };
 
     
@@ -21,8 +16,23 @@ class Cards extends Component {
   render() {
     return (
       <div>
-        
-        This is a card
+
+        {this.props.cards.map(card => (
+          <div className="card-box">
+            
+            <div className="card-header">
+              <h3>{card.name}</h3>
+            </div>
+            <div className="card-body">
+              <p>{card.description}</p>
+            </div>
+            
+          </div>
+        ))}
+
+        <div className="card-footer">
+          <p>Cards left: {this.props.cards.length}</p>
+        </div>
 
       </div>
     )
