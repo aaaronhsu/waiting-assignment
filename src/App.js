@@ -17,7 +17,8 @@ class App extends Component {
 
       cards: [
         {id: 1, name: 'Test Decision 1', description: 'Test Description 1', id_impact: -.1, superego_impact: .1},
-        {id: 1, name: 'Test Decision 2', description: 'Test Description 2 walfhtioyawfhtoyiawhftyoiawfhtoyawh fotyawhfoyt hawofy aowyft hawofyu thaoyft haowyft hoawyfh toaywf htoyawfh toaw hftoyaw htoyauw hftoyawu hftoyawu htoyawu htoyawh ftoyawh ufoty uahwfot uhawfoytuh awfoytuh awfoytuh awfoytuh awofytuh awofythu awoyftuh aowyfuh toaywfht oaywfh toaywfuht aowyfut hawoyftuh awofytuh awofytuh awoftuh awofytuh awofytuh ', id_impact: .3, superego_impact: -.4},
+        {id: 2, name: 'Test Decision 2', description: 'Test Description 2 walfhtioyawfhtoyiawhftyoiawfhtoyawh fotyawhfoyt hawofy aowyft hawofyu thaoyft haowyft hoawyfh toaywf htoyawfh toaw hftoyaw htoyauw hftoyawu hftoyawu htoyawu htoyawh ftoyawh ufoty uahwfot uhawfoytuh awfoytuh awfoytuh awfoytuh awofytuh awofythu awoyftuh aowyfuh toaywfht oaywfh toaywfuht aowyfut hawoyftuh awofytuh awofytuh awoftuh awofytuh awofytuh ', id_impact: .3, superego_impact: -.4},
+        {id: 3, name: 'Test Decision 3', description: 'Test Description 3', id_impact: .2, superego_impact: .2},
       ],
     };
 
