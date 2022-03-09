@@ -24,6 +24,14 @@ class App extends Component {
 
   }
 
+  removeCard = () => {
+    let cards = [...this.state.cards];
+
+    this.setState({
+      cards: cards.slice(1)
+    });
+  };
+
   render() {
     return (
       <div>
@@ -46,6 +54,8 @@ class App extends Component {
             <Center>
               <Cards 
                 cards={this.state.cards}
+
+                removeCard={() => this.removeCard()}
               />
             </Center>
 
