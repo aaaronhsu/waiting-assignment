@@ -1,20 +1,35 @@
 
-.card-box {
+.cards {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+}
+
+
+.card-box {
   
   text-align: center;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 5px; 
 
 
   padding: 50px;
   margin: 10px;
-  width: 20%;
+  width: 100%;
 }
 
 .card-body {
   
+}
+
+.card-reject, .card-accept {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30%;
+
+  margin-top: 150%;
 }

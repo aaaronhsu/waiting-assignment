@@ -45,15 +45,11 @@ class Cards extends Component {
     }
 
     return (
-      <div>
+      <div className="cards">
 
         {reject}
         {card}
         {accept}
-
-        <div className="card-footer">
-          <p>Cards left: {this.props.cards.length}</p>
-        </div>
 
       </div>
     )

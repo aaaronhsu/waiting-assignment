@@ -73,14 +73,15 @@ class App extends Component {
 
             <h2>List of cards:</h2>
             
-            <Center>
-              <Cards 
-                cards={this.state.cards}
+            <Cards 
+              cards={this.state.cards}
 
-                acceptCard={() => this.acceptCard()}
-                rejectCard={() => this.rejectCard()}
-              />
-            </Center>
+              acceptCard={() => this.acceptCard()}
+              rejectCard={() => this.rejectCard()}
+            />
+
+            <p>Cards left: {this.state.cards.length}</p>
+
 
           </div>
 
