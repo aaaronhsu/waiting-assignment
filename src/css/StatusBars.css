@@ -1,13 +1,16 @@
 
 .id-bar {
   position: relative;
+  display: relative;
 }
 
 .superego-bar {
   position: relative;
-  
+  display: relative;
+
 }
 
 .status-bar {
   transform: translate(25%, 0);
+  margin: 10px;
 }

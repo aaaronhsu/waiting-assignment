@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/App.css';
+import './css/Global.css';
 import Center from 'react-center';
 
 import Cards from './components/Cards';
@@ -84,8 +85,6 @@ class App extends Component {
             <div className="interactive-box">
     
               <div className="cards-box">
-    
-                <h2>List of cards:</h2>
                 
                 <Cards 
                   cards={this.state.cards}

@@ -19,11 +19,11 @@ class IdBar extends Component {
     return (
       <div className="id-bar">
 
-        id-bar: {this.props.id_level}
-
         <ProgressBar
           className="status-bar"
+
           completed={this.props.id_level}
+          customLabel={"ID"}
           bgColor="#b59ec3"
           labelColor="#ffffff"
           width="50%"
