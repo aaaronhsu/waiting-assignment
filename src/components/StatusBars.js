@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import '../css/StatusBars.css';
+import '../css/Buttons.css';
 
 import IdBar from './IdBar.js';
 import SuperegoBar from './SuperegoBar.js';
 import EgoBar from './EgoBar.js';
+
 
 class StatusBars extends Component {
 

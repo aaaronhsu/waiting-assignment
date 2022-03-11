@@ -1,0 +1,25 @@
+.card-reject, .card-accept {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+}
+
+.green {
+    color: #4CAF50;
+}
+
+.red {
+    color: #f44336;
+}
+
+.card-reject:hover + .ego-bar {
+    color: blue;
+}
+
+.card-reject:hover {
+    color: purple;
+}

@@ -15,7 +15,7 @@ class IdBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="id-bar">
 
         idbar: {this.props.id_level}
 

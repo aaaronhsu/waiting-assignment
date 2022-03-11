@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../css/StatusBar.css';
+import '../css/Buttons.css';
 
 class EgoBar extends Component {
 
@@ -15,7 +16,7 @@ class EgoBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="ego-bar">
 
         EgoBar: {1 - 2 * (this.props.id_level - this.props.superego_level)}
 

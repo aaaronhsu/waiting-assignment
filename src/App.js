@@ -16,7 +16,7 @@ class App extends Component {
       superego_level: 30,
 
       cards: [
-        {id: 1, name: 'Test Decision 1', description: 'Test Description 1', accept_id_impact: -10, accept_superego_impact: 10, reject_id_impact: 10, reject_superego_impact: -10},
+        {id: 1, name: 'Test Decision 1', description: 'Test Description 1 awyftu hawiftyhaowyfu hawyfuhto awyfuthawofyuthaowfyuthowyufthoaywufh toyawu ftoyau wfotya wftyu awfoytu hawfotyau whfoyawu fotyawufh ot aywuhfotyawuoauwh fouh oyu', accept_id_impact: -10, accept_superego_impact: 10, reject_id_impact: 10, reject_superego_impact: -10},
         {id: 2, name: 'Test Decision 2', description: 'Test Description 2', accept_id_impact: -20, accept_superego_impact: 20, reject_id_impact: 20, reject_superego_impact: -20},
         {id: 3, name: 'Test Decision 4', description: 'Test Description 4', accept_id_impact: -40, accept_superego_impact: 40, reject_id_impact: 40, reject_superego_impact: -40},
       ],

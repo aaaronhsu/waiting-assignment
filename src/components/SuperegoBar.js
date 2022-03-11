@@ -15,7 +15,7 @@ class SuperegoBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="superego-bar">
 
         SuperegoBar: {this.props.superego_level}
 

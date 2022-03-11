@@ -15,21 +15,10 @@
   border-radius: 5px; 
 
 
-  padding: 50px;
-  margin: 10px;
   width: 100%;
+  margin: 10px;
 }
 
 .card-body {
-  
-}
-
-.card-reject, .card-accept {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 30%;
-
-  margin-top: 150%;
+  margin: 15px;
 }
