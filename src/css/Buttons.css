@@ -16,10 +16,7 @@
     color: #f44336;
 }
 
-.card-reject:hover + .ego-bar {
-    color: blue;
-}
-
-.card-reject:hover {
-    color: purple;
+.card-accept, .card-reject, .card-accept:hover, .card-reject:hover {
+  cursor: pointer;
+  transition: 0.3s;
 }

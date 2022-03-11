@@ -29,6 +29,10 @@ class Cards extends Component {
           <div className="card-body">
             <p>{this.props.cards[0].description}</p>
           </div>
+
+          <div className="card-footer">
+            <p>Cards Left: {this.props.cards.length}</p>
+          </div>
         </div>
 
       accept =

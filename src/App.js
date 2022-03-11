@@ -28,7 +28,8 @@ class App extends Component {
     let cards = [...this.state.cards];
 
     this.setState({
-      cards: cards.slice(1)
+      cards: cards.slice(1),
+      ego_level: Math.abs(this.state.ego_level - this.state.id_level)
     });
   };
 
@@ -55,39 +56,54 @@ class App extends Component {
   }
 
   render() {
+
+    let game_over_message =
+      <div className="game-over">
+        <h1>Game Over</h1>
+        <p>You have reached the end of the game. You have lost.</p>
+      </div>
+      
     return (
       <div>
 
-        <div className="status-box">
-          
-          <StatusBars
-            id_level={this.state.id_level}
-            superego_level={this.state.superego_level}
-          />
+        {
+          this.state.id_level <= 0 || this.state.superego_level <= 0 ?
 
-        </div>
-        
-        <div className="interactive-box">
-
-          <div className="cards-box">
-
-            <h2>List of cards:</h2>
+          game_over_message
+          :
+          <div>
+            <div className="status-box">
+              
+              <StatusBars
+                id_level={this.state.id_level}
+                superego_level={this.state.superego_level}
+              />
+    
+            </div>
             
-            <Cards 
-              cards={this.state.cards}
-
-              acceptCard={() => this.acceptCard()}
-              rejectCard={() => this.rejectCard()}
-            />
-
-            <p>Cards left: {this.state.cards.length}</p>
-
-
+            <div className="interactive-box">
+    
+              <div className="cards-box">
+    
+                <h2>List of cards:</h2>
+                
+                <Cards 
+                  cards={this.state.cards}
+    
+                  acceptCard={() => this.acceptCard()}
+                  rejectCard={() => this.rejectCard()}
+                />
+    
+    
+              </div>
+    
+            </div>
           </div>
-
+          
+        }
+  
         </div>
 
-      </div>
     )
   };
 

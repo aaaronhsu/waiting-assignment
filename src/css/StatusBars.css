@@ -1,0 +1,13 @@
+
+.id-bar {
+  position: relative;
+}
+
+.superego-bar {
+  position: relative;
+  
+}
+
+.status-bar {
+  transform: translate(25%, 0);
+}
