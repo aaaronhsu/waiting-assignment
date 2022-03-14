@@ -5,6 +5,7 @@ import './css/Global.scss';
 
 import Cards from './components/Cards';
 import StatusBars from './components/StatusBars';
+import GameOver from './components/GameOver';
 
 class App extends Component {
 
@@ -12,8 +13,9 @@ class App extends Component {
     super(props);
 
     this.state = {
-      id_level: 60,
-      superego_level: 30,
+      id_level: 50,
+      superego_level: 40,
+      game_lost: 0,
 
       cards: [
         {id: 1, name: 'Test Decision 1', description: 'Test Description 1 awyftu hawiftyhaowyfu hawyfuhto awyfuthawofyuthaowfyuthowyufthoaywufh toyawu ftoyau wfotya wftyu awfoytu hawfotyau whfoyawu fotyawufh ot aywuhfotyawuoauwh fouh oyu', accept_id_impact: -10, accept_superego_impact: 10, reject_id_impact: 10, reject_superego_impact: -10},
@@ -34,35 +36,76 @@ class App extends Component {
     });
   };
 
+  checkGameOver = (d_id, d_sego) => {
+    if (this.state.id_level + d_id <= 0) {
+      this.setState({
+        game_lost: 1,
+        id_level: 0,
+      });
+
+      return true;
+    }
+    else if (this.state.id_level + d_id >= 100) {
+      this.setState({
+        game_lost: 2,
+        id_level: 100,
+      });
+
+      return true;
+    }
+    else if (this.state.superego_level + d_sego <= 0) {
+      this.setState({
+        game_lost: 3,
+        superego_level: 0,
+      });
+
+      return true;
+    }
+    else if (this.state.superego_level + d_sego >= 100) {
+      this.setState({
+        game_lost: 4,
+        superego_level: 100,
+      });
+
+      return true;
+    }
+
+    return false;
+  }
+
   acceptCard = () => {
+
+    let game_over = this.checkGameOver(this.state.cards[0].accept_id_impact, this.state.cards[0].accept_superego_impact);
+
     let cards = [...this.state.cards];
 
-    this.setState({
-      id_level: Math.round(this.state.id_level + cards[0].accept_id_impact),
-      superego_level: Math.round(this.state.superego_level + cards[0].accept_superego_impact),
-    });
+    if (!game_over) {
+      this.setState({
+        id_level: Math.round(this.state.id_level + cards[0].accept_id_impact),
+        superego_level: Math.round(this.state.superego_level + cards[0].accept_superego_impact),
+      });
+    }
 
     this.removeCard();
   }
 
   rejectCard = () => {
+
+    let game_over = this.checkGameOver(this.state.cards[0].reject_id_impact, this.state.cards[0].reject_superego_impact);
+
     let cards = [...this.state.cards];
 
-    this.setState({
-      id_level: Math.round(this.state.id_level + cards[0].reject_id_impact),
-      superego_level: Math.round(this.state.superego_level + cards[0].reject_superego_impact),
-    });
+    if (!game_over) {
+      this.setState({
+        id_level: Math.round(this.state.id_level + cards[0].reject_id_impact),
+        superego_level: Math.round(this.state.superego_level + cards[0].reject_superego_impact),
+      });
+    }
 
     this.removeCard();
   }
 
   render() {
-
-    let game_over_message =
-      <div className="game-over">
-        <h1>Game Over</h1>
-        <p>You have reached the end of the game. You have lost.</p>
-      </div>
       
     return (
       <div>
@@ -71,11 +114,6 @@ class App extends Component {
           Waiting
         </h1>
 
-        {
-          this.state.id_level <= 0 || this.state.superego_level <= 0 ?
-
-          game_over_message
-          :
           <div>
             <div className="status-box">
               
@@ -85,25 +123,29 @@ class App extends Component {
               />
     
             </div>
-            
-            <div className="interactive-box">
-    
-              <div className="cards-box">
-                
-                <Cards 
-                  cards={this.state.cards}
-    
-                  acceptCard={() => this.acceptCard()}
-                  rejectCard={() => this.rejectCard()}
-                />
-    
-    
+
+            {
+
+              this.state.game_lost != 0 ? <GameOver game_lost={this.state.game_lost} /> :
+              <div className="interactive-box">
+      
+                <div className="cards-box">
+                  
+                  <Cards 
+                    cards={this.state.cards}
+      
+                    acceptCard={() => this.acceptCard()}
+                    rejectCard={() => this.rejectCard()}
+                  />
+      
+      
+                </div>
+      
               </div>
-    
-            </div>
+
+            }
+            
           </div>
-          
-        }
   
           <div className="footer">
             <p>
