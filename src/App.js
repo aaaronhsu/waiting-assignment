@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './css/App.scss';
-import Center from 'react-center';
+import './css/Global.scss';
 
 import Cards from './components/Cards';
 import StatusBars from './components/StatusBars';
@@ -22,6 +22,7 @@ class App extends Component {
       ],
     };
 
+    
   }
 
   removeCard = () => {
@@ -66,6 +67,10 @@ class App extends Component {
     return (
       <div>
 
+        <h1 className="title">
+          Waiting
+        </h1>
+
         {
           this.state.id_level <= 0 || this.state.superego_level <= 0 ?
 
@@ -100,6 +105,15 @@ class App extends Component {
           
         }
   
+          <div className="footer">
+            <p>
+              <i>
+                Waiting</i>, by Ha Jin, is a story about a Lin, a war general who struggles 
+                to balance his desires (<span className="id-color">ID</span>) with the way that others perceive him (<span className="superego-color">Superego</span>). 
+                Accept or reject Lin’s actions and try to keep his <span className="id-color">ID</span> and <span className="superego-color">Superego</span> away from 
+                the extremes.
+            </p>
+          </div>
         </div>
 
     )
