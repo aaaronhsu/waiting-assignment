@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './css/App.css';
+import './css/App.scss';
 import Center from 'react-center';
 
 import Cards from './components/Cards';

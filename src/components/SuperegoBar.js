@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/StatusBars.css';
+import '../css/StatusBars.scss';
 
 import ProgressBar from "@ramonak/react-progress-bar";
 
