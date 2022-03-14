@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import '../css/StatusBar.css';
+import '../css/StatusBars.scss';
+
+import ProgressBar from "@ramonak/react-progress-bar";
 
 class SuperegoBar extends Component {
 
@@ -15,9 +17,18 @@ class SuperegoBar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="superego-bar">
 
-        SuperegoBar: {this.props.superego_level}
+        <ProgressBar
+          className="status-bar"
+
+          completed={this.props.superego_level}
+          customLabel={"Superego"}
+
+          bgColor="#e69696"
+          labelColor="#ffffff"
+          width="50%"
+        />
 
       </div>
     )

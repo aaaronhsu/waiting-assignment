@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import '../css/StatusBars.css';
+import '../css/StatusBars.scss';
+import '../css/Buttons.scss';
 
 import IdBar from './IdBar.js';
 import SuperegoBar from './SuperegoBar.js';
-import EgoBar from './EgoBar.js';
+
 
 class StatusBars extends Component {
 
@@ -23,8 +24,6 @@ class StatusBars extends Component {
 
         <IdBar id_level={this.props.id_level} />
         <SuperegoBar superego_level={this.props.superego_level} />
-
-        <EgoBar id_level={this.props.id_level} superego_level={this.props.superego_level} />
 
       </div>
     )

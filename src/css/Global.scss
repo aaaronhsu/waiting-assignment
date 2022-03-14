@@ -1,0 +1,33 @@
+$ID: #96c6e6;
+$SUPEREGO: #e69696;
+
+html {
+    margin: 1%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.title {
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 50%;
+  font-size: 16px;
+  transform: translate(50%, 0);
+
+  margin-bottom: 10px;
+}
+
+.id-color {
+  color: $ID;
+  font-weight: bold;
+}
+
+.superego-color {
+  color: $SUPEREGO;
+  font-weight: bold;
+}

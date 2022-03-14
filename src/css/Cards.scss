@@ -1,0 +1,38 @@
+
+.cards {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+
+  margin-top: 10px;
+}
+
+
+.card-box {
+  
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px; 
+
+
+  width: 500px;
+  height: 500px;
+  margin: 10px;
+}
+
+.card-header {
+  background-color: #ccc;
+  border-radius: 5px 5px 0 0;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.card-body {
+  margin: 15px;
+}
+
+.card-footer {
+  font-style: italic;
+}
