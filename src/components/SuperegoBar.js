@@ -19,12 +19,13 @@ class SuperegoBar extends Component {
     return (
       <div className="superego-bar">
 
-        superego-bar: {this.props.superego_level}
-
         <ProgressBar
           className="status-bar"
+
           completed={this.props.superego_level}
-          bgColor="#b59ec3"
+          customLabel={"Superego"}
+
+          bgColor="#ff0000"
           labelColor="#ffffff"
           width="50%"
         />

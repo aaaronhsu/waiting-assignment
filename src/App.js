@@ -84,8 +84,6 @@ class App extends Component {
             <div className="interactive-box">
     
               <div className="cards-box">
-    
-                <h2>List of cards:</h2>
                 
                 <Cards 
                   cards={this.state.cards}
