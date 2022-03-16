@@ -121,7 +121,7 @@ class App extends Component {
       <div>
 
         <h1 className="title">
-          Waiting
+          Freudian Waiting
         </h1>
         <p className="header">
           <i>Waiting</i>, by Ha Jin, is a story about a Lin, a war general who struggles 
