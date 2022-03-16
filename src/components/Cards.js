@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../css/Cards.scss';
 import '../css/Buttons.scss';
 
+import PlayAgain from './PlayAgain';
+
 class Cards extends Component {
 
   constructor(props) {
@@ -50,7 +52,7 @@ class Cards extends Component {
         </div>
     }
     else {
-      card = <p>no more cards</p>
+      card = <div className="win-text"><h3>You have successfully balanced Lin's psyche!</h3> <PlayAgain /></div>
     }
 
     return (

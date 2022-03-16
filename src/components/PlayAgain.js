@@ -23,7 +23,7 @@ class PlayAgain extends Component {
 
         {/* <button onClick={this.refreshPage()}>Play Again</button> */}
 
-        <h3>Please reload the page to play again!</h3>
+        <h3>Please reload the page to play again</h3>
 
       </div>
     )
