@@ -19,6 +19,7 @@
 
   width: 500px;
   height: 500px;
+
   margin: 10px;
 }
 
@@ -27,6 +28,16 @@
   border-radius: 5px 5px 0 0;
   padding: 10px;
   font-size: 20px;
+}
+
+.card-accept-description {
+  font-style: italic;
+  font-weight: bold;
+}
+
+.card-reject-description {
+  font-style: italic;
+  font-weight: bold;
 }
 
 .card-body {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../css/GameOver.scss';
 
+import PlayAgain from './PlayAgain';
+
 class GameOver extends Component {
 
   constructor(props) {
@@ -44,6 +46,8 @@ class GameOver extends Component {
         {
           this.gameOverMessage()
         }
+        
+        <PlayAgain />
 
       </div>
     )
