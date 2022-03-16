@@ -25,7 +25,7 @@ class SuperegoBar extends Component {
           completed={this.props.superego_level}
           customLabel={"Superego"}
 
-          bgColor="#e69696"
+          bgColor="#cc517a"
           labelColor="#ffffff"
           width="50%"
         />

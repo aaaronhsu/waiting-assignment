@@ -1,25 +1,25 @@
-$ID: #96c6e6;
-$SUPEREGO: #e69696;
+$ID: #2d539e;
+$SUPEREGO: #cc517a;
 
 html {
     margin: 1%;
     overflow-x: hidden;
     overflow-y: scroll;
+
+    background-color: #e8e9ec;
 }
 
 .title {
   text-align: center;
 }
 
-.footer {
-  position: absolute;
-  bottom: 0;
+.header {
   text-align: center;
   width: 50%;
   font-size: 16px;
   transform: translate(50%, 0);
 
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .id-color {
@@ -30,4 +30,12 @@ html {
 .superego-color {
   color: $SUPEREGO;
   font-weight: bold;
+}
+
+p {
+  color: #33374c;
+}
+
+h2 {
+  color: #262a3f;
 }

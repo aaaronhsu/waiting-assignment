@@ -24,7 +24,7 @@ class IdBar extends Component {
 
           completed={this.props.id_level}
           customLabel={"ID"}
-          bgColor="#96c6e6"
+          bgColor="#2d539e"
           labelColor="#ffffff"
           width="50%"
         />

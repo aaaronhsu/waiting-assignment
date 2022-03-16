@@ -7,16 +7,31 @@ $card-translation: 0px;
     align-items: center;
     width: 100%;
     height: 100%;
-
+    border: 1px solid #c2c2c2;
+    
     border-radius: 5px;
 }
 
-.green {
-    color: #4CAF50;
+.card-accept {
+    font-weight: bold;
+    background-color: #7cce75;
+    transition:cubic-bezier(1, 0, 0, 1) 0.5s;
 }
 
-.red {
-    color: #f44336;
+.card-reject {
+    font-weight: bold;
+    background-color: #ce7575;
+    transition:cubic-bezier(1, 0, 0, 1) 0.5s;
+}
+
+.card-accept:hover {
+  background-color: #6ee27d;
+  transition: cubic-bezier(1, 0, 0, 1) 0.5s;
+}
+
+.card-reject:hover {
+  background-color: #e47171;
+  transition: cubic-bezier(1, 0, 0, 1) 0.5s;
 }
 
 .card-accept, .card-reject, .card-accept:hover, .card-reject:hover {
@@ -24,21 +39,21 @@ $card-translation: 0px;
   transition: 0.3s;
 }
 
-@mixin card-box-animation($card-translation) {
+// @mixin card-box-animation($card-translation) {
 
-  .card-box {
-    transform: translate($card-translation, 0px);
-    transition: 0.3s;
-  }
-}
+//   .card-box {
+//     transform: translate($card-translation, 0px);
+//     transition: 0.3s;
+//   }
+// }
 
-.card-reject:hover {
-  $card-translation: -50px;
-  @include card-box-animation($card-translation);
-}
+// .card-reject:hover {
+//   $card-translation: -50px;
+//   @include card-box-animation($card-translation);
+// }
 
-.card-accept:hover {
-  $card-translation: 50px;
-  @include card-box-animation($card-translation);
-}
+// .card-accept:hover {
+//   $card-translation: 50px;
+//   @include card-box-animation($card-translation);
+// }
 

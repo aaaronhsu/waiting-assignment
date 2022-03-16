@@ -28,6 +28,10 @@ class Cards extends Component {
           </div>
           <div className="card-body">
             <p>{this.props.cards[0].description}</p>
+
+            <p className="card-accept-description">Accept: {this.props.cards[0].accept_description}</p>
+            <p className="card-reject-description">Reject: {this.props.cards[0].reject_description}</p>
+
           </div>
 
           <div className="card-footer">
